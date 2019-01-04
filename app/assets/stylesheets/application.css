@@ -1,15 +1,273 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/*高级软件工程作业*/
+/*薛四青--第一版*/
+/*存放所有的标签样式.*/
+
+/*初始化标签*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, 
+form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none;color: black; } 
+a:hover { text-decoration:underline; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+/*标签初始化结束*/
+
+/*背景css样式*/
+.index-page{
+    background-repeat:no-repeat;
+    background-position:left top;
+}
+/*导航栏样式*/
+.index-bar{
+    height: 60px;
+    background-color: #4B4B4B;
+    border-collapse: collapse;
+}
+.logo{
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    text-indent: 2em;
+}
+.search{
+    height: 60px;
+    float:left;
+    text-indent: 4em;
+    line-height: 60px;
+}
+.search .input{
+    padding-left: 13px;
+    padding-right:46px;
+    height: 34px;
+    border: 2px solid #7BA7AB;
+    border-radius: 5px 0 0 5px;
+    background: #ddd;
+    color: white;
+}
+.search .button {
+    height: 38px;
+    width: 42px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    background: #7BA7AB;
+    border-radius: 0 5px 5px 0;
+    border:2px solid #7BA7AB;
+}
+.search .button:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        font-size: 16px;
+        color: #F9F0DA;
+}
+.nav-bar{
+    margin:0 0 15px 15px;
+    float: left;
+}
+.nav-text li{
+    list-style: none;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1px;
+    padding: 0 10px;
+    
+}
+
+.nav-text li a{
+    color:#fff;
+    line-height: 56px;
+}
+.new-dataset{
+    float:left;
+    margin-left:2em;
+    color:#fff;
+}
+.signup{
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    height: 30px;
+    width: 80px;
+    background-color: #0cf;
+    border:2px;
+    border-radius: 10%;
+    text-align: center;
+}
+.signup a{
+    font-family: fantasy;
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff;
+}
+.divide-part{
+    background-color:#969696;
+    height: 15px;
+}
+.content-part{
+    position: absolute;
+    left: 0;
+    top: 76px;
+    height:100%;
+    width:100%;
+    background-color: #fff;
+}
+.content{
+    position: absolute;
+    /*垂直居中*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*垂直居中*/
+    width:70%;
+    height:100%;
+
+}
+.data-table{
+    box-shadow: 3px 3px rgba(34, 25, 25, 0.2);
+    margin-top:8px;
+}
+   
+.list-line-odd{
+    background-color: #fff;
+     
+}
+.list-line-even{
+    background-color: #ddd;
+     
+}
+.image-show{
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+    border-radius:3px;
+    margin-left:1em;
+}
+.description-show dl dt{
+    margin-left:1em;
+    margin-bottom: 2px;
+    font-weight: bold;
+    color: #000;
+}
+.description-show dl dd{
+    margin-left:1em;
+    font-size: 14px;
+    color: #000;
+}
+.list-action{
+    margin-left:1em;
+}
+.list-action p{
+    font-size:12px;
+    line-height:18px;
+    margin-left:2em;
+    margin-right:1.5em;
+}
+
+/*----------------------------------------------*/
+/*---------------------------------------------*/
+/*详情页css*/
+.show-div{
+    margin-top: 2em;
+    position: absolute;
+    /*垂直居中*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*垂直居中*/
+    width:80%;
+    height:60%;
+    background-color: #f1f1f1;
+
+}
+
+.show-div table .image-show1{
+    margin-top: 2px;
+    text-align: left;
+    width: 60px;
+    height: 60px;
+}
+.show-div table .name{
+    text-align: left;
+    padding-left: 1em;
+}
+.show-div .ds1{
+    height: 10px;
+    font-weight: bold;
+    font-size: large;
+    padding-left: 1em;
+}
+.show-div .ds2{
+    width: 94%;
+    height: 60%;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 2em;
+    text-indent: 2em;
+    line-height: 1.5em;
+    background-color: #eaf0f7;
+}
+.show-div .down{
+    float: right;
+}
+.show-div .down th{
+    background-color: #a4ddf5;
+    border:2px;
+    border-color: #fbfbfb;
+    border-radius: 5%;
+    height: 30px;
+    width: 60px;
+    margin-top: 5px;
+}
+.show-div .comments{
+    margin-top: 2em;
+    position: absolute;
+    /*垂直居中*/
+    left: 0;
+    right: 0;
+    margin: auto;
+    /*垂直居中*/
+    width:100%;
+    height:100%;
+    background-color: #f1f1f1;
+
+}
+.show-div .space{
+    height: 1.5em;
+}
+.show-div .comments table{
+    width: 100%;
+    height: 10%;
+}
+.show-div .comments th{
+    font-size: xx-large;
+    border:1px solid red;
+    text-indent:0.5em;
+    text-align: left;
+    color: #b3d59d; text-shadow: 0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,0.1), 
+    0 0 5px rgba(0,0,0,0.1),
+    0 1px 3px rgba(0,0,0,0.3),
+    0 3px 5px rgba(0,0,0,0.2),
+    0 5px 10px rgba(0,0,0,0.25);
+}
+.show-div .comments td{
+    border:1px solid red;
+}
