@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # 处理注册成功情况
+      log_in user
       flash[:success] = "哎呦，不错哦，注册成功了"
       redirect_to root_path
     else
