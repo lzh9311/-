@@ -1,9 +1,11 @@
 class User < ApplicationRecord
+    has_many :microposts,dependent: :destroy
     before_save {self.email = email.downcase}
     validates(  :name,presence:true,
                 length:{maximum:50})
     
     # 邮件验证正则表达式
+    
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
     validates(  :email,presence:true,
                 length:{maximum:200}, 
@@ -12,4 +14,7 @@ class User < ApplicationRecord
                         
     has_secure_password
     validates(:password,presence:true,length:{minimum:6},allow_nil:true)
+    def feed
+        Micropost.where("user_id = ?", id)
+    end
 end

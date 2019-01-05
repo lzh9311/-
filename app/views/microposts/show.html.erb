@@ -1,0 +1,23 @@
+<%= "#{Rails.root}" %>
+<div class = 'show-div'>
+  <table>
+    <tr>
+      <th class = 'image-show1'>
+          <%= image_tag @micropost.picture.url if @micropost.picture?%>
+          </th>
+      <th class = 'name'>数据集<br/><%= @micropost.d_name %></th>
+    </tr>
+  </table>
+  <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="100%" color=#987cb9 SIZE=3>
+    <div class = "ds1">
+      <p>数据集详情</p>
+    </div>
+    <div class = 'ds2'>
+      <p><%= @micropost.content %></p>
+    </div>
+    <table class = "down">
+      <tr>
+        <th>BY:<%= @micropost.d_author %>&nbsp;&nbsp;</th>
+        <th><a href="http://www.baidu.com" >&nbsp;下载</a></th>
+      </tr>
+    </table>

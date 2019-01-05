@@ -19,3 +19,13 @@ User.create!(name: "sqing",
         password: password,
         password_confirmation: password)
 end
+
+users = User.order(:created_at).take(6)
+50.times do
+    d_author = "sqing"
+    d_durl = "www.baidu.com"
+    d_name = "MNIST"
+    content = Faker::Lorem.sentence(5)
+    users.each { |user| user.microposts.create!(content: content,d_durl: d_durl,
+                                            d_name: d_name,d_author: d_author)}
+end

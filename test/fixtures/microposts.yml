@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  d_name: MyString
+  d_author: MyString
+  d_durl: MyString
+  content: MyText
+  user: one
+
+two:
+  d_name: MyString
+  d_author: MyString
+  d_durl: MyString
+  content: MyText
+  user: two
