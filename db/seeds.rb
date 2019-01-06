@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+## 用户测试样例
 User.create!(name: "sqing",
     email: "763693955@qq.com",
     password: "1234567",
@@ -20,6 +21,7 @@ User.create!(name: "sqing",
         password_confirmation: password)
 end
 
+# 分享内容测试样例
 users = User.order(:created_at).take(6)
 50.times do
     d_author = "sqing"
@@ -29,3 +31,11 @@ users = User.order(:created_at).take(6)
     users.each { |user| user.microposts.create!(content: content,d_durl: d_durl,
                                             d_name: d_name,d_author: d_author)}
 end
+
+# 关注测试样例
+users = User.all
+user = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
