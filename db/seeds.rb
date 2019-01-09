@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 ## 用户测试样例
-User.create!(name: "sqing",
+I18n.locale = :zh
+User.create!(name: "admin",
     email: "763693955@qq.com",
     password: "1234567",
     password_confirmation: "1234567",
@@ -26,7 +27,7 @@ users = User.order(:created_at).take(6)
 50.times do
     d_author = "sqing"
     d_durl = "www.baidu.com"
-    d_name = "MNIST"
+    d_name = "MNIST-test"
     content = Faker::Lorem.sentence(5)
     users.each { |user| user.microposts.create!(content: content,d_durl: d_durl,
                                             d_name: d_name,d_author: d_author)}
