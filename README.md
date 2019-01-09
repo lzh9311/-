@@ -1,7 +1,7 @@
  <center># 高级软件工程大作业</center>
  
 ## 数据集导航网站
-## 项目主页:[Github](https://github.com/manllman/- "Github")||[HeroKu](https://bringd.herokuapp.com/ "HeroKu")
+## 项目主页:[Github](https://github.com/manllman/- "Github")||[HeroKu](https://bring2d.herokuapp.com/ "HeroKu")
 ## 具体细节
 
 > 1.用户邮箱验证唯一性，有效性，长度，不为空
